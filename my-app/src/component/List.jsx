@@ -8,7 +8,6 @@ function UserItem(props) {
             <span>{name}</span>
             <a href={href}><img className="user-image" src={imageUrl} alt={name} /></a>
             <a style={{ color: "white" }} href={imglink}>Google Maps</a>
-
         </li>
     );
 }

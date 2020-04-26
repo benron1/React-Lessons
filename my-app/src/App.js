@@ -1,7 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import List from "./component/List";
+// import List from "./component/List";
+import Box from "./component/Box"
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          <List name={"my name"}></List>
+          <Box name={"my name"}></Box>
         </p>
         <a
           className="App-link"
