@@ -1,0 +1,27 @@
+import React from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import List from "./component/List";
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <p>
+          <List name={"my name"}></List>
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click Me!
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
