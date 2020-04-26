@@ -7,12 +7,8 @@ class Box extends React.Component {
         super(props);
     }
 
-    // box2(){
-    //   <div class="box2"></div>
-    // }
-
     render() {
-        //   this.box2
+
         return <div class="box1">
             <Box2></Box2>
         </div>;

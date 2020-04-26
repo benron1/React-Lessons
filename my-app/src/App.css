@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color:rgb(237, 125, 115);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -70,4 +70,44 @@
   height: 50px;
   width: 200px;
   margin: 10px;
+}
+
+.nav{
+  background-color: white;
+  padding-left: 50px!important; 
+  height: 60px;
+  align-items: center;
+}
+
+.nav-link{
+  color: black;
+}
+
+.logo {
+  height: 30px;
+  margin-top: 8px;
+  margin-left: 65vw;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.ColumnData{
+  display: flex;
+}
+
+.Main_column{
+  margin: 20px;
+
+}
+
+.text{
+  font-size: 12px;
+}
+
+.image{
+  height: 200px;
+  margin: 30px 0px;
+
 }

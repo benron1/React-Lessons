@@ -6,9 +6,7 @@ class Box2 extends React.Component {
         super(props);
     }
 
-
     render() {
-
         return <div class="box2">
             <Box3></Box3>
         </div>;
