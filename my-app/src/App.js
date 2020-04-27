@@ -6,7 +6,8 @@ import './App.css';
 // import Navbar from "./component/Navbar"
 // import Middletext from "./component/Middletext"
 // import Column from "./component/Column"
-import UserList from "./component/UserList";
+// import UserList from "./component/UserList";
+import Alive from "./component/Alive";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          <UserList></UserList>
+          <Alive></Alive>
+          {/* <UserList></UserList> */}
           {/* <Middletext></Middletext>
           <Column></Column> */}
           {/* <Box name={"my name"}></Box> */}
