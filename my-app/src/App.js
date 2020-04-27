@@ -3,19 +3,21 @@ import React from 'react';
 import './App.css';
 // import List from "./component/List";
 // import Box from "./component/Box"
-import Navbar from "./component/Navbar"
-import Middletext from "./component/Middletext"
-import Column from "./component/Column"
+// import Navbar from "./component/Navbar"
+// import Middletext from "./component/Middletext"
+// import Column from "./component/Column"
+import UserList from "./component/UserList";
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          <Middletext></Middletext>
-          <Column></Column>
+          <UserList></UserList>
+          {/* <Middletext></Middletext>
+          <Column></Column> */}
           {/* <Box name={"my name"}></Box> */}
         </p>
         {/* <a
