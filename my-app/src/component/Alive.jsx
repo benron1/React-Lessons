@@ -1,6 +1,33 @@
 import React from 'react';
 
-class Alive extends React.Component {
+class Checkbox extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            status: false,
+        };
+    }
+
+    ifclick = () => {
+        this.setState({ status: !this.state.status })
+    }
+
+    render() {
+        return (
+            <div class="custom-control custom-checkbox">
+                <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="defaultUnchecked"
+                    onClick={this.ifclick}
+                ></input>
+                {this.state.status && <Timer />}
+            </div>
+        );
+    }
+}
+
+class Timer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,4 +56,4 @@ class Alive extends React.Component {
     }
 }
 
-export default Alive;
+export default Checkbox;
