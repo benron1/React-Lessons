@@ -13,6 +13,7 @@ class List extends React.Component {
 
     componentDidMount() {
         this.loadData();
+
     }
 
     async loadData() {
@@ -33,21 +34,26 @@ class List extends React.Component {
         console.log("clicked")
     }
 
+
+
     render() {
         return (
-            <ul>
-                {this.state.loading && <span>Loading...</span>}
-                {this.state.data.map((item) => (
-                    <li key={item.id}>
-                        <div>Id: {item.id}</div>
-                        <div>Name: {item.name}</div>
-                        <img src={item.avatar}></img>
-                        <button onClick={() => this.deleteUser(item.id)}> Delete </button>
-                    </li>
-                ))}
-            </ul>
+            <div>
+                <ul>
+                    {this.state.loading && <span>Loading...</span>}
+                    {this.state.data.map((item) => (
+                        <li key={item.id}>
+                            <div>Id: {item.id}</div>
+                            <div>Name: {item.name}</div>
+                            <img src={item.avatar}></img>
+                            <button onClick={() => this.deleteUser(item.id)}> Delete </button>
+                        </li>
+                    ))}
+                </ul></div>
         );
     }
 }
+
+
 
 export default List;
