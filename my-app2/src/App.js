@@ -1,17 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Api from "./Api";
+import React from "react";
+import { getData, DeleteID, postNewId } from "./lib/Api";
+import List from "./components/List";
+
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <List></List>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Api></Api>
         <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
+                </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,7 +21,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+                </a>
       </header>
     </div>
   );
