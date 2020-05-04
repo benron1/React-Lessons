@@ -1,15 +1,61 @@
 import React from "react";
-import '../App.css';
+import Item from './Items';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams,
+} from "react-router-dom";
 
-const Products = () => {
+export default function ParamsExample() {
     return (
-        <ul className="product_list">
-            <li>IPhone <img style={{ height: "60px" }} src="https://lh3.googleusercontent.com/proxy/PIpKpvIEBvDdits9Hq__rbliZVZAtM9ffeKYysf9WRZudDJfEJxC7b4ZXwjJSzJjvn8Fw7CJZTdmF5OiM04YJFfW_Op8mFUiD4PCtPlPVHkyvc-A_5is" alt="" /></li>
-            <li>IPad <img style={{ height: "60px" }} src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/rfb-ipad-pro10in-spacegray-wifi-2017?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1582330420693" alt="" /></li>
-            <li>IPod <img style={{ height: "60px" }} src="https://storemobile.co.il/up/gallery/68495_6fg8.jpg" alt="" /></li>
-        </ul>
+        <Router>
+            <div>
+                <ul>
+                    <li key={"Iphone"}>
+                        <img
+                            style={{ height: "50px", margin: "10px" }}
+                            src="https://d3m9l0v76dty0.cloudfront.net/system/photos/4328337/original/fa70ad17e869095038ef43cdc54d2cf4.jpg"
+                        />
+                        <Link to="products/1">Iphone</Link>
+                    </li>
+                    <li>
+                        <img
+                            style={{ height: "50px", margin: "10px" }}
+                            src="https://d3m9l0v76dty0.cloudfront.net/system/photos/4636409/large/8c74c7ba7b90b16ef9ac6a85c4c47b02.jpg"
+                        />
+                        {" "}
+                        <Link to="products/2">Ipad</Link>
+                    </li>
+                    <li>
+                        <img
+                            style={{ height: "50px", margin: "10px" }}
+                            src="https://img.wisebuy.co.il/data/MPeg3/nano_4.jpg"
+                        />
+                        {" "}
+                        <Link to="products/3">Ipod</Link>
 
-    )
+                    </li>
+                </ul>
+
+                <Switch>
+                    {/* <Route path="/:id" children={<Child />} /> */}
+                </Switch>
+            </div>
+        </Router>
+    );
 }
-export default Products;
+
+function Child() {
+    // We can use the `useParams` hook here to access
+    // the dynamic pieces of the URL.
+    let { id } = useParams();
+
+    return (
+        <div>
+            <h3>ID: {id}</h3>
+        </div>
+    );
+}
