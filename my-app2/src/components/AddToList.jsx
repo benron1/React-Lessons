@@ -9,7 +9,6 @@ class AddToList extends React.Component {
             data: [],
             formName: '',
             formAvatar: '',
-            loading: true,
         };
     }
 
@@ -68,7 +67,6 @@ class AddToList extends React.Component {
                     />
                     <button type="submit">New user</button>
                 </form>
-                {loading && <span>Loading...</span>}
                 <ul>
                     {data.map((user) => (
                         <li key={user.id}>
